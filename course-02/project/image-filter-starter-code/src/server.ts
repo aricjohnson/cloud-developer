@@ -26,6 +26,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     res.sendFile(filteredPath, {}, async () => {
       await deleteLocalFiles([filteredPath]);
     });
+    return res.status(200);
   } );
   
   // Root Endpoint
